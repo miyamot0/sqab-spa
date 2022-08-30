@@ -4,7 +4,7 @@ module.exports = {
   entry: `${__dirname}/src/index.tsx`,
   output: {
     path: `${__dirname}/build`,
-    publicPath: '/build/',
+    publicPath: '/sqab-spa/build/',
     filename: 'bundle.js',
   },
 
@@ -45,7 +45,7 @@ module.exports = {
   // and test spa-github-pages redirect in dev
   devServer: {
     historyApiFallback: {
-      rewrites: [{ from: /\//, to: '/404.html' }],
+      rewrites: [{ from: /\/sqab-spa\/[^?]/, to: '/404.html' }],
     },
   },
 };
